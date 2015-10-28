@@ -54,16 +54,19 @@ form.default label input[type=number] {
 }
 form.default label textarea {
   min-height: 6em;
+  box-sizing: border-box;
 }
 form.default > fieldset {
   position: relative;
-  border: solid 1px #b8c2d5;
-  padding: 0px;
+  border: solid 1px #7e92b0;
+  padding: 10px;
   margin: 0px;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 100%;
   float: left;
+  width: 100%;
+  padding-top: 0px;
+  box-sizing: border-box;
 }
 form.default > fieldset > legend {
   background-color: #e7ebf1;
@@ -71,9 +74,11 @@ form.default > fieldset > legend {
   margin-top: 1em;
   padding: 0;
   margin: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
   border: none;
   line-height: 2em;
-  width: 100%;
   font-size: 12pt;
   font-weight: bold;
   text-indent: 1ex;
@@ -82,14 +87,17 @@ form.default > fieldset > legend {
 form.default > fieldset > label,
 form.default > fieldset > div {
   text-indent: 0.25ex;
-  padding: 1ex;
+  max-width: 100%;
 }
 form.default > fieldset > button {
   margin-left: 1ex;
 }
 form.default .required {
+  font-weight: bold;
+}
+form.default .required:after {
+  content: "*";
   color: red;
-  font-size: 1.2em;
 }
 form.default div input[type=date],
 form.default div input[type=email],
@@ -102,7 +110,7 @@ form.default div select {
   display: inline;
 }
 form.default input[type=radio] {
-  margin-right: 1ex;
+  margin-right: 10px;
 }
 form.default select {
   height: 30px;

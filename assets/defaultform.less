@@ -41,18 +41,21 @@ form.default {
         }
         textarea {
             min-height: 6em;
+            box-sizing: border-box;
         }
     }
 
     > fieldset {
         position: relative;
-        border: solid 1px @content-color-60;
-        padding: 0px;
+        border: solid 1px @base-color-60;
+        padding: 10px;
         margin: 0px;
         margin-top: 10px;
         margin-bottom: 10px;
-        width: 100%;
         float: left;
+        width: 100%;
+        padding-top: 0px;
+        box-sizing: border-box;
 
         > legend {
             background-color: @fieldset-header;
@@ -60,10 +63,11 @@ form.default {
             margin-top: 1em;
             padding: 0;
             margin: 0;
+            margin-left: -10px;
+            margin-right: -10px;
+            width: ~'calc(100% + 20px)';
             border: none;
             line-height: 2em;
-            width: 100%;
-            //left:0px;
             font-size: 12pt;
             font-weight: bold;
             text-indent: 1ex;
@@ -72,7 +76,7 @@ form.default {
 
         > label, > div  {
             text-indent: 0.25ex;
-            padding: 1ex;
+            max-width: 100%;
         }
         > button {
             margin-left: 1ex;
@@ -80,8 +84,11 @@ form.default {
     }
 
     .required {
-        color: red;
-        font-size: 1.2em;
+        font-weight: bold;
+        &:after {
+            content: "*";
+            color: red;
+        }
     }
 
 
@@ -95,7 +102,7 @@ form.default {
     }
 
     input[type=radio] {
-        margin-right: 1ex;
+        margin-right: 10px;
     }
 
 

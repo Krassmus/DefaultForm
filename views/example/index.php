@@ -50,7 +50,20 @@
 
     </fieldset>
 
+    <fieldset>
+        <label>
+            Hausnummer
+            <input type="number">
+        </label>
+
+        <label>
+            Lebenslauf
+            <textarea></textarea>
+        </label>
+
+    </fieldset>
+
     <footer>
-        <button>submit</button>
+        <?= \Studip\Button::create(_("Speichern")) ?>
     </footer>
 </form>
