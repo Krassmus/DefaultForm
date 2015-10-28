@@ -57,26 +57,28 @@ form.default label textarea {
 }
 form.default > fieldset {
   position: relative;
-  padding-top: 3em;
-  border-color: #d4dbe5;
-  border-style: solid;
+  border-style: solid 1px #b8c2d5;
   border-width: 1px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
   margin-bottom: 10px;
+  width: 100%;
+  float: left;
 }
 form.default > fieldset > legend {
   background-color: #e7ebf1;
   color: #24437c;
-  position: absolute;
-  top: 0px;
+  margin-top: 1em;
   padding: 0;
   margin: 0;
   border: none;
   line-height: 2em;
   width: 100%;
-  left: 0px;
   font-size: 12pt;
   font-weight: bold;
   text-indent: 1ex;
+  float: left;
 }
 form.default > fieldset > label,
 form.default > fieldset > div {
@@ -115,4 +117,12 @@ form.default .submit_wrapper {
 }
 form.default .studip_input_wrapper {
   padding: 1ex;
+}
+form.default footer {
+  clear: both;
+  padding: 0;
+  margin-left: 0;
+  background-color: #d1d1d1;
+  border-top: 1px solid #1e3e70;
+  padding-left: 0;
 }

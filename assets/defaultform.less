@@ -46,26 +46,29 @@ form.default {
 
     > fieldset {
         position: relative;
-        padding-top: 3em;
-        border-color: @fieldset-border;
-        border-style: solid;
+        border-style: solid 1px @content-color-60;
         border-width: 1px;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 10px;
         margin-bottom: 10px;
+        width: 100%;
+        float: left;
 
         > legend {
             background-color: @fieldset-header;
             color: @brand-color-dark;
-            position: absolute;
-            top: 0px;
+            margin-top: 1em;
             padding: 0;
             margin: 0;
             border: none;
             line-height: 2em;
             width: 100%;
-            left:0px;
+            //left:0px;
             font-size: 12pt;
             font-weight: bold;
             text-indent: 1ex;
+            float: left;
         }
 
         > label, > div  {
@@ -112,5 +115,14 @@ form.default {
 
     .studip_input_wrapper {
         padding: 1ex;
+    }
+
+    footer {
+        clear: both;
+        padding: 0;
+        margin-left: 0;
+        background-color: @table-footer-color;
+        border-top: 1px solid @brand-color-darker;
+        padding-left: 0;
     }
 }

@@ -7,9 +7,17 @@
     <!-- einfach -->
 
     <label>
-        Hausnummer
+        <span class="required">Hausnummer</span>
         <input type="number">
+        <?= tooltipIcon(_('Bitte geben Sie hier nur eine Zahl ein')) ?>
+        <span class="tooltip-content">Bitte geben Sie hier nur eine Zahl ein</span>
     </label>
+
+    <!-- alternativ -->
+    <section class="required">
+        <label for="house">Hausnummer</label>
+        <input type="number" id="house" required>
+    </section>
 
     <label>
         Beschreibung für die Liste der Checkboxen
@@ -43,6 +51,6 @@
     </fieldset>
 
     <footer>
-        <button><?= \Studip\Button::create(_("Speichern")) ?></button>
+        <button>submit</button>
     </footer>
 </form>
