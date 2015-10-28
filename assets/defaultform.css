@@ -57,8 +57,7 @@ form.default label textarea {
 }
 form.default > fieldset {
   position: relative;
-  border-style: solid 1px #b8c2d5;
-  border-width: 1px;
+  border: solid 1px #b8c2d5;
   padding: 0px;
   margin: 0px;
   margin-top: 10px;
