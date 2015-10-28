@@ -1,0 +1,118 @@
+form.default input[type=date],
+form.default input[type=email],
+form.default input[type=number],
+form.default input[type=password],
+form.default input[type=text],
+form.default input[type=url],
+form.default textarea,
+form.default select {
+  display: block;
+  padding: 5px;
+  border: 1px solid #c3c8cc;
+  color: #3c454e;
+  margin-top: 1ex;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+form.default input[type=date]:focus,
+form.default input[type=email]:focus,
+form.default input[type=number]:focus,
+form.default input[type=password]:focus,
+form.default input[type=text]:focus,
+form.default input[type=url]:focus,
+form.default textarea:focus,
+form.default select:focus {
+  outline: none;
+  border-color: #24437c;
+}
+form.default textarea {
+  width: 100%;
+}
+form.default .caption {
+  font-weight: bold;
+  color: #24437c;
+  font-size: 11pt;
+}
+form.default label {
+  display: block;
+}
+form.default label input[type=date],
+form.default label input[type=email],
+form.default label input[type=number],
+form.default label input[type=password],
+form.default label input[type=text],
+form.default label input[type=url],
+form.default label textarea,
+form.default label select {
+  display: block;
+  min-width: 24em;
+}
+form.default label input[type=number] {
+  min-width: 1ex;
+}
+form.default label textarea {
+  min-height: 6em;
+}
+form.default > fieldset {
+  position: relative;
+  padding-top: 3em;
+  border-color: #d4dbe5;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 10px;
+}
+form.default > fieldset > legend {
+  background-color: #e7ebf1;
+  color: #24437c;
+  position: absolute;
+  top: 0px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  line-height: 2em;
+  width: 100%;
+  left: 0px;
+  font-size: 12pt;
+  font-weight: bold;
+  text-indent: 1ex;
+}
+form.default > fieldset > label,
+form.default > fieldset > div {
+  text-indent: 0.25ex;
+  padding: 1ex;
+}
+form.default > fieldset > button {
+  margin-left: 1ex;
+}
+form.default .required {
+  color: red;
+  font-size: 1.2em;
+}
+form.default div input[type=date],
+form.default div input[type=email],
+form.default div input[type=number],
+form.default div input[type=password],
+form.default div input[type=text],
+form.default div input[type=url],
+form.default div textarea,
+form.default div select {
+  display: inline;
+}
+form.default input[type=radio] {
+  margin-right: 1ex;
+}
+form.default select {
+  height: 30px;
+}
+form.default .submit_wrapper {
+  padding: 0;
+  margin-left: 0.5ex;
+  background-color: #d1d1d1;
+  border-top: 1px solid #1e3e70;
+  padding-left: 1.5ex;
+}
+form.default .studip_input_wrapper {
+  padding: 1ex;
+}
