@@ -36,38 +36,34 @@ form.default {
     input[type=date], input[type=email], input[type=number],
     input[type=password], input[type=text], input[type=url],
     textarea, select {
-        display: block;
-        padding: 5px;
+        .box-sizing(border-box);
+
         border: 1px solid @light-gray-color-40;
         color: @dark-gray-color;
+        display: block;
         margin-top: 10px;
+        padding: 5px;
         .transition(all 0.3s ease-out);
 
         &:focus {
-            outline: none;
             border-color: @brand-color-dark;
+        }
+
+        &.size-s {
+            min-width: ~'calc(2ex + 20px)';
+            width: 20%;
+        }
+        &.size-m {
+            min-width: 200px;
+            width: 50%;
+        }
+        &.size-l {
+            min-width: 100%;
         }
     }
 
     textarea, input[type=text] {
         width: 100%;
-    }
-    textarea.size-l, input.size-l, select {
-        min-width: 100%;
-    }
-    textarea.size-m, input.size-m, select {
-        width: 50%;
-        min-width: 200px;
-    }
-    textarea.size-s, input.size-s, select {
-        min-width: ~'calc(2ex + 20px)';
-        width: 20%;
-    }
-
-    .caption {
-        font-weight: bold;
-        color: @brand-color-dark;
-        font-size: 11pt;
     }
 
     label {
@@ -85,48 +81,40 @@ form.default {
         }
         textarea {
             min-height: 6em;
-            box-sizing: border-box;
         }
     }
 
     fieldset {
-        position: relative;
+        .box-sizing(border-box);
+
         border: solid 1px @base-color-60;
-        padding: 10px;
-        margin: 0px;
-        margin-top: 10px;
-        margin-bottom: 10px;
         float: left;
-        width: 100%;
+        margin: 10px 0 10px;
+        padding: 10px;
         padding-top: 0px;
-        box-sizing: border-box;
+        position: relative;
+        width: 100%;
 
         break-before: column;
 
         > legend {
             background-color: @fieldset-header;
-            color: @brand-color-dark;
-            margin-top: 1em;
-            padding: 0;
-            margin: 0;
-            margin-left: -10px;
-            margin-right: -10px;
-            width: ~'calc(100% + 20px)';
             border: none;
-            line-height: 2em;
+            color: @brand-color-dark;
+            float: left;
             font-size: 12pt;
             font-weight: bold;
+            line-height: 2em;
+            margin: 1em -10px 0 -10px;
+            padding: 0;
             text-indent: 10px;
-            float: left;
+            width: ~'calc(100% + 20px)';
         }
 
-        > label, > div  {
+        > label  {
             margin-top: 10px;
-            text-indent: 0.25ex;
             max-width: 100%;
-        }
-        > button {
-            margin-left: 10px;
+            text-indent: 0.25ex;
         }
 
         > :first-child:not(legend), > legend + * {
@@ -142,48 +130,15 @@ form.default {
         }
     }
 
-
-
-    div {
-        input[type=date], input[type=email], input[type=number],
-        input[type=password], input[type=text], input[type=url],
-        textarea, select {
-            display: inline;
-        }
-    }
-
     input[type=radio] {
         margin-right: 10px;
     }
 
-
-
-    select {
-        height: 30px;
-    }
-
-    .submit_wrapper {
-        padding: 0;
-        margin-left: 0.5ex;
-        background-color: @table-footer-color;
-        border-top: 1px solid @brand-color-darker;
-        padding-left: 1.5ex;
-    }
-
-    .studip_input_wrapper {
-        padding: 1ex;
-    }
-
     footer {
-        clear: both;
-        padding: 0;
-        margin-left: 0;
         background-color: @table-footer-color;
         border-top: 1px solid @brand-color-darker;
-        padding-left: 0;
-
-        //-moz-column-span: all;
-        //-webkit-column-span: all;
-        //column-span: all;
+        clear: both;
+        margin-left: 0;
+        padding: 0;
     }
 }
