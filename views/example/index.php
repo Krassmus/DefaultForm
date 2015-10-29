@@ -10,7 +10,6 @@
         <span class="required">Hausnummer</span>
         <input type="number">
         <?= tooltipIcon(_('Bitte geben Sie hier nur eine Zahl ein')) ?>
-        <span class="tooltip-content">Bitte geben Sie hier nur eine Zahl ein</span>
     </label>
 
     <!-- alternativ -->
