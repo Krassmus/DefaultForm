@@ -7,19 +7,16 @@
     <!-- einfach -->
 
     <label>
-        <span class="required">Überschrift</span>
-        <input type="text">
-    </label>
-
-    <label>
         <span class="required">Hausnummer</span>
-        <?= tooltipIcon(_('Bitte geben Sie hier nur eine Zahl ein')) ?>
         <input type="number">
+        <?= tooltipIcon(_('Bitte geben Sie hier nur eine Zahl ein')) ?>
     </label>
 
     <!-- alternativ -->
-    <label for="house" class="required">Hausnummer</label>
-    <input type="number" id="house" required>
+    <section class="required">
+        <label for="house">Hausnummer</label>
+        <input type="number" id="house" required>
+    </section>
 
     <label>
         Beschreibung für die Liste der Checkboxen
@@ -38,11 +35,11 @@
     <!-- erweitert -->
 
     <fieldset>
-        <legend>Test (default = size-m)</legend>
+        <legend>test</legend>
 
         <label>
-            Einrichtung
-            <input type="text">
+            Hausnummer
+            <input type="number">
         </label>
 
         <label>
