@@ -42,11 +42,14 @@ form.default input[type=text],
 form.default input[type=url],
 form.default textarea,
 form.default select {
-  display: block;
-  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid #c3c8cc;
   color: #3c454e;
+  display: block;
   margin-top: 10px;
+  padding: 5px;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -60,34 +63,43 @@ form.default input[type=text]:focus,
 form.default input[type=url]:focus,
 form.default textarea:focus,
 form.default select:focus {
-  outline: none;
   border-color: #24437c;
+}
+form.default input[type=date].size-s,
+form.default input[type=email].size-s,
+form.default input[type=number].size-s,
+form.default input[type=password].size-s,
+form.default input[type=text].size-s,
+form.default input[type=url].size-s,
+form.default textarea.size-s,
+form.default select.size-s {
+  min-width: calc(2ex + 20px);
+  width: 20%;
+}
+form.default input[type=date].size-m,
+form.default input[type=email].size-m,
+form.default input[type=number].size-m,
+form.default input[type=password].size-m,
+form.default input[type=text].size-m,
+form.default input[type=url].size-m,
+form.default textarea.size-m,
+form.default select.size-m {
+  min-width: 200px;
+  width: 50%;
+}
+form.default input[type=date].size-l,
+form.default input[type=email].size-l,
+form.default input[type=number].size-l,
+form.default input[type=password].size-l,
+form.default input[type=text].size-l,
+form.default input[type=url].size-l,
+form.default textarea.size-l,
+form.default select.size-l {
+  min-width: 100%;
 }
 form.default textarea,
 form.default input[type=text] {
   width: 100%;
-}
-form.default textarea.size-l,
-form.default input.size-l,
-form.default select {
-  min-width: 100%;
-}
-form.default textarea.size-m,
-form.default input.size-m,
-form.default select {
-  width: 50%;
-  min-width: 200px;
-}
-form.default textarea.size-s,
-form.default input.size-s,
-form.default select {
-  min-width: calc(2ex + 20px);
-  width: 20%;
-}
-form.default .caption {
-  font-weight: bold;
-  color: #24437c;
-  font-size: 11pt;
 }
 form.default label {
   display: block;
@@ -108,44 +120,37 @@ form.default label input[type=number] {
 }
 form.default label textarea {
   min-height: 6em;
-  box-sizing: border-box;
 }
 form.default fieldset {
-  border: solid 1px #7e92b0;
-  padding: 10px;
-  margin: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  float: left;
-  width: 100%;
-  padding-top: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  border: solid 1px #7e92b0;
+  float: left;
+  margin: 10px 0 10px;
+  padding: 10px;
+  padding-top: 0px;
+  position: relative;
+  width: 100%;
   break-before: column;
 }
 form.default fieldset > legend {
   background-color: #e7ebf1;
-  color: #24437c;
-  margin-top: 1em;
-  padding: 0;
-  margin: 0;
-  margin-left: -10px;
-  margin-right: -10px;
-  width: calc(100% + 20px);
   border: none;
-  line-height: 2em;
+  color: #24437c;
+  float: left;
   font-size: 12pt;
   font-weight: bold;
+  line-height: 2em;
+  margin: 0 -10px 1em -10px;
+  padding: 0;
   text-indent: 10px;
-  float: left;
+  width: calc(100% + 20px);
 }
-form.default fieldset > label,
-form.default fieldset > div {
+form.default fieldset > label {
   margin-top: 10px;
-  text-indent: 0.25ex;
   max-width: 100%;
-}
-form.default fieldset > button {
-  margin-left: 10px;
+  text-indent: 0.25ex;
 }
 form.default fieldset > :first-child:not(legend),
 form.default fieldset > legend + * {
@@ -158,39 +163,15 @@ form.default .required:after {
   content: "*";
   color: red;
 }
-form.default div input[type=date],
-form.default div input[type=email],
-form.default div input[type=number],
-form.default div input[type=password],
-form.default div input[type=text],
-form.default div input[type=url],
-form.default div textarea,
-form.default div select {
-  display: inline;
-}
 form.default input[type=radio] {
   margin-right: 10px;
 }
-form.default select {
-  height: 30px;
-}
-form.default .submit_wrapper {
-  padding: 0;
-  margin-left: 0.5ex;
-  background-color: #d1d1d1;
-  border-top: 1px solid #1e3e70;
-  padding-left: 1.5ex;
-}
-form.default .studip_input_wrapper {
-  padding: 1ex;
-}
 form.default footer {
-  clear: both;
-  padding: 0;
-  margin-left: 0;
   background-color: #d1d1d1;
   border-top: 1px solid #1e3e70;
-  padding-left: 0;
+  clear: both;
+  margin-left: 0;
+  padding: 0;
 }
 form.default label.file-upload {
   cursor: pointer;
@@ -202,4 +183,8 @@ form.default label.file-upload {
 }
 form.default label.file-upload input[type=file] {
   display: none;
+}
+form.default label.file-upload .filename {
+  padding-left: 0.5em;
+  color: #879199;
 }
