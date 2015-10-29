@@ -63,8 +63,26 @@ form.default select:focus {
   outline: none;
   border-color: #24437c;
 }
-form.default textarea {
+form.default textarea,
+form.default input[type=text] {
   width: 100%;
+}
+form.default textarea.size-l,
+form.default input.size-l,
+form.default select {
+  min-width: 100%;
+}
+form.default textarea.size-m,
+form.default input.size-m,
+form.default select {
+  width: 50%;
+  min-width: 200px;
+}
+form.default textarea.size-s,
+form.default input.size-s,
+form.default select {
+  min-width: calc(2ex + 20px);
+  width: 20%;
 }
 form.default .caption {
   font-weight: bold;

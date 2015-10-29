@@ -52,8 +52,19 @@ form.default {
         }
     }
 
-    textarea {
+    textarea, input[type=text] {
         width: 100%;
+    }
+    textarea.size-l, input.size-l, select {
+        min-width: 100%;
+    }
+    textarea.size-m, input.size-m, select {
+        width: 50%;
+        min-width: 200px;
+    }
+    textarea.size-s, input.size-s, select {
+        min-width: ~'calc(2ex + 20px)';
+        width: 20%;
     }
 
     .caption {
