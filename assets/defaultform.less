@@ -1,39 +1,36 @@
+.column-width(@width) {
+    -moz-column-width: @width;
+    -webkit-column-width: @width;
+    column-width: @width;
+}
+.column-count(@count) {
+    -moz-column-count: @count;
+    -webkit-column-count: @count;
+    column-count: @count;
+}
+.column-gap(@gap) {
+    -moz-column-gap: @gap;
+    -webkit-column-gap: @gap;
+    column-gap: @gap;
+}
+.columns(@width, @count: auto, @gap: 10px) {
+    .column-width(@width);
+    .column-count(@count);
+    .column-gap(@gap);
+}
+
 form.default {
 
     display: block;
 
     &.columns-200 {
-        -moz-column-width: 200px;
-        -webkit-column-width: 200px;
-        column-width: 200px;
-        -moz-column-count: auto;
-        -webkit-column-count: auto;
-        column-count: auto;
-        -moz-column-gap: 10px;
-        -webkit-column-gap: 10px;
-        column-gap: 10px;
+        .columns(200px);
     }
     &.columns-300 {
-        -moz-column-width: 300px;
-        -webkit-column-width: 300px;
-        column-width: 300px;
-        -moz-column-count: auto;
-        -webkit-column-count: auto;
-        column-count: auto;
-        -moz-column-gap: 10px;
-        -webkit-column-gap: 10px;
-        column-gap: 10px;
+        .columns(300px);
     }
     &.columns-400 {
-        -moz-column-width: 400px;
-        -webkit-column-width: 400px;
-        column-width: 400px;
-        -moz-column-count: auto;
-        -webkit-column-count: auto;
-        column-count: auto;
-        -moz-column-gap: 10px;
-        -webkit-column-gap: 10px;
-        column-gap: 10px;
+        .columns(400px);
     }
 
     input[type=date], input[type=email], input[type=number],
