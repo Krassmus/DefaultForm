@@ -7,8 +7,19 @@
     <!-- einfach -->
 
     <label>
-        <span class="required">Überschrift</span>
-        <input type="text">
+        Kurze Eingabe
+        <input type="text" class="size-s">
+    </label>
+
+    <label>
+        Mittlere Eingabe
+        <input type="text" class="size-m">
+    </label>
+
+
+    <label>
+        Längere Eingabe
+        <input type="text" class="size-l">
     </label>
 
     <label>
@@ -71,6 +82,7 @@
     </fieldset>
 
     <footer>
-        <?= \Studip\Button::create(_("Speichern")) ?>
+        <?= \Studip\Button::createAccept(_("Speichern")) ?>
+        <?= \Studip\Button::createCancel(_("Abbrechen")) ?>
     </footer>
 </form>
