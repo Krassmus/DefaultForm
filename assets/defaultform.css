@@ -1,3 +1,39 @@
+form.default {
+  display: block;
+}
+form.default.columns-200 {
+  -moz-column-width: 200px;
+  -webkit-column-width: 200px;
+  column-width: 200px;
+  -moz-column-count: auto;
+  -webkit-column-count: auto;
+  column-count: auto;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+form.default.columns-300 {
+  -moz-column-width: 300px;
+  -webkit-column-width: 300px;
+  column-width: 300px;
+  -moz-column-count: auto;
+  -webkit-column-count: auto;
+  column-count: auto;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+form.default.columns-400 {
+  -moz-column-width: 400px;
+  -webkit-column-width: 400px;
+  column-width: 400px;
+  -moz-column-count: auto;
+  -webkit-column-count: auto;
+  column-count: auto;
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
 form.default input[type=date],
 form.default input[type=email],
 form.default input[type=number],
@@ -10,7 +46,7 @@ form.default select {
   padding: 5px;
   border: 1px solid #c3c8cc;
   color: #3c454e;
-  margin-top: 1ex;
+  margin-top: 10px;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -50,13 +86,13 @@ form.default label select {
   min-width: 24em;
 }
 form.default label input[type=number] {
-  min-width: 1ex;
+  min-width: 10px;
 }
 form.default label textarea {
   min-height: 6em;
   box-sizing: border-box;
 }
-form.default > fieldset {
+form.default fieldset {
   position: relative;
   border: solid 1px #7e92b0;
   padding: 10px;
@@ -67,8 +103,9 @@ form.default > fieldset {
   width: 100%;
   padding-top: 0px;
   box-sizing: border-box;
+  break-before: column;
 }
-form.default > fieldset > legend {
+form.default fieldset > legend {
   background-color: #e7ebf1;
   color: #24437c;
   margin-top: 1em;
@@ -81,16 +118,21 @@ form.default > fieldset > legend {
   line-height: 2em;
   font-size: 12pt;
   font-weight: bold;
-  text-indent: 1ex;
+  text-indent: 10px;
   float: left;
 }
-form.default > fieldset > label,
-form.default > fieldset > div {
+form.default fieldset > label,
+form.default fieldset > div {
+  margin-top: 10px;
   text-indent: 0.25ex;
   max-width: 100%;
 }
-form.default > fieldset > button {
-  margin-left: 1ex;
+form.default fieldset > button {
+  margin-left: 10px;
+}
+form.default fieldset > :first-child:not(legend),
+form.default fieldset > legend + * {
+  margin-top: 10px;
 }
 form.default .required {
   font-weight: bold;

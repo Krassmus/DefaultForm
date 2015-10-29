@@ -1,5 +1,41 @@
 form.default {
 
+    display: block;
+
+    &.columns-200 {
+        -moz-column-width: 200px;
+        -webkit-column-width: 200px;
+        column-width: 200px;
+        -moz-column-count: auto;
+        -webkit-column-count: auto;
+        column-count: auto;
+        -moz-column-gap: 10px;
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+    }
+    &.columns-300 {
+        -moz-column-width: 300px;
+        -webkit-column-width: 300px;
+        column-width: 300px;
+        -moz-column-count: auto;
+        -webkit-column-count: auto;
+        column-count: auto;
+        -moz-column-gap: 10px;
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+    }
+    &.columns-400 {
+        -moz-column-width: 400px;
+        -webkit-column-width: 400px;
+        column-width: 400px;
+        -moz-column-count: auto;
+        -webkit-column-count: auto;
+        column-count: auto;
+        -moz-column-gap: 10px;
+        -webkit-column-gap: 10px;
+        column-gap: 10px;
+    }
+
     input[type=date], input[type=email], input[type=number],
     input[type=password], input[type=text], input[type=url],
     textarea, select {
@@ -7,7 +43,7 @@ form.default {
         padding: 5px;
         border: 1px solid @light-gray-color-40;
         color: @dark-gray-color;
-        margin-top: 1ex;
+        margin-top: 10px;
         .transition(all 0.3s ease-out);
 
         &:focus {
@@ -37,7 +73,7 @@ form.default {
         }
 
         input[type=number] {
-            min-width: 1ex;
+            min-width: 10px;
         }
         textarea {
             min-height: 6em;
@@ -45,7 +81,7 @@ form.default {
         }
     }
 
-    > fieldset {
+    fieldset {
         position: relative;
         border: solid 1px @base-color-60;
         padding: 10px;
@@ -56,6 +92,8 @@ form.default {
         width: 100%;
         padding-top: 0px;
         box-sizing: border-box;
+
+        break-before: column;
 
         > legend {
             background-color: @fieldset-header;
@@ -70,16 +108,21 @@ form.default {
             line-height: 2em;
             font-size: 12pt;
             font-weight: bold;
-            text-indent: 1ex;
+            text-indent: 10px;
             float: left;
         }
 
         > label, > div  {
+            margin-top: 10px;
             text-indent: 0.25ex;
             max-width: 100%;
         }
         > button {
-            margin-left: 1ex;
+            margin-left: 10px;
+        }
+
+        > :first-child:not(legend), > legend + * {
+            margin-top: 10px;
         }
     }
 
@@ -130,5 +173,9 @@ form.default {
         background-color: @table-footer-color;
         border-top: 1px solid @brand-color-darker;
         padding-left: 0;
+
+        //-moz-column-span: all;
+        //-webkit-column-span: all;
+        //column-span: all;
     }
 }

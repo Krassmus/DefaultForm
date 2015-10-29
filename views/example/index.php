@@ -1,4 +1,4 @@
-<form class="default">
+<form class="default columns-300">
     <!-- Optionaler Header -->
     <header>
         <h2>test</h2>
