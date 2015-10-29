@@ -140,6 +140,7 @@ form.default {
         clear: both;
         margin-left: 0;
         padding: 0;
+        text-align: center;
     }
 
 
@@ -157,8 +158,15 @@ form.default {
         }
         .filename {
             padding-left: 0.5em;
-            color: @light-gray-color-80;
+            color: @light-gray-color-60;
+            font-size: 0.9em;
         }
+    }
+
+    input + .maxlength {
+        text-align: right;
+        color: @light-gray-color-60;
+        font-size: 0.9em;
     }
 
 }

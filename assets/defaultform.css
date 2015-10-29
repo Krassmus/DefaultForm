@@ -172,6 +172,7 @@ form.default footer {
   clear: both;
   margin-left: 0;
   padding: 0;
+  text-align: center;
 }
 form.default label.file-upload {
   cursor: pointer;
@@ -186,5 +187,11 @@ form.default label.file-upload input[type=file] {
 }
 form.default label.file-upload .filename {
   padding-left: 0.5em;
-  color: #879199;
+  color: #a5adb2;
+  font-size: 0.9em;
+}
+form.default input + .maxlength {
+  text-align: right;
+  color: #a5adb2;
+  font-size: 0.9em;
 }

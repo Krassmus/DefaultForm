@@ -65,6 +65,11 @@
             <input type="file">
         </label>
 
+        <label>
+            Tweet
+            <input type="text" maxlength="140">
+        </label>
+
     </fieldset>
 
     <footer>
