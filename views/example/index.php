@@ -1,4 +1,4 @@
-<form class="default columns-300">
+<form class="default">
     <!-- Optionaler Header -->
     <header>
         <h2>test</h2>
@@ -59,6 +59,11 @@
         <label>
             Lebenslauf
             <textarea></textarea>
+        </label>
+
+        <label class="file-upload">
+            Lebenslauf (Datei)
+            <input type="file">
         </label>
 
     </fieldset>

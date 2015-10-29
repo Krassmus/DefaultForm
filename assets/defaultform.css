@@ -111,7 +111,6 @@ form.default label textarea {
   box-sizing: border-box;
 }
 form.default fieldset {
-  position: relative;
   border: solid 1px #7e92b0;
   padding: 10px;
   margin: 0px;
@@ -192,4 +191,15 @@ form.default footer {
   background-color: #d1d1d1;
   border-top: 1px solid #1e3e70;
   padding-left: 0;
+}
+form.default label.file-upload {
+  cursor: pointer;
+  padding-left: 30px;
+  background-image: url('../../../../../assets/images/icons/blue/upload.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 20px 20px;
+}
+form.default label.file-upload input[type=file] {
+  display: none;
 }

@@ -93,7 +93,6 @@ form.default {
     }
 
     fieldset {
-        position: relative;
         border: solid 1px @base-color-60;
         padding: 10px;
         margin: 0px;
@@ -189,4 +188,20 @@ form.default {
         //-webkit-column-span: all;
         //column-span: all;
     }
+
+
+    //Special inputs
+
+    label.file-upload {
+        cursor: pointer;
+        padding-left: 30px;
+        background-image: url('../../../../../assets/images/icons/blue/upload.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 20px 20px;
+        input[type=file] {
+            display: none;
+        }
+    }
+
 }
