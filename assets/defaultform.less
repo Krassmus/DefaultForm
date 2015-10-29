@@ -88,21 +88,19 @@ form.default {
     }
 
     footer {
-        background-color: @content-color-20;
+        background-color: @table-footer-color;
         border-top: 1px solid @brand-color-darker;
         clear: both;
         margin-left: 0;
-        padding: 5px;
+        padding: 10px;
     }
-
 
     //Special inputs
 
     label.file-upload {
-        .retina-background-icon('blue/upload.svg');
-
         cursor: pointer;
         padding-left: 30px;
+        background-image: url('../../../../assets/images/icons/blue/upload.svg');
         background-repeat: no-repeat;
         background-position: top left;
         background-size: 20px 20px;
@@ -111,15 +109,8 @@ form.default {
         }
         .filename {
             padding-left: 0.5em;
-            color: @light-gray-color-60;
-            font-size: 0.9em;
+            color: @light-gray-color-80;
         }
-    }
-
-    input + .maxlength {
-        text-align: right;
-        color: @light-gray-color-60;
-        font-size: 0.9em;
     }
 
 }

@@ -50,27 +50,22 @@
             <textarea></textarea>
         </label>
 
-    </fieldset>
-
-    <fieldset>
-        <label>
-            Hausnummer
-            <input type="number">
-        </label>
-
-        <label>
-            Lebenslauf
-            <textarea></textarea>
-        </label>
-
         <label class="file-upload">
             Lebenslauf (Datei)
             <input type="file">
         </label>
 
+    </fieldset>
+
+    <fieldset>
         <label>
-            Tweet
-            <input type="text" maxlength="140">
+            Einrichtung
+            <input type="text" class="size-l">
+        </label>
+
+        <label>
+            Lebenslauf
+            <textarea class="size-l"></textarea>
         </label>
 
     </fieldset>
